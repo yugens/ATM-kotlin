@@ -1,7 +1,12 @@
 package com.example
 
-class BankingService {
+class BankingService(val transaction: Boolean){
+    var balance = 0;
     fun withdraw(amount: Int) {
-        //DO NOT CHANGE. ONLY FOR DEMO PURPOSES.
+        balance = amount
+        if (transaction == false) {
+            throw error("Not enough amount available")
+        }
     }
+
 }

@@ -1,7 +1,11 @@
 package com.example
 
-class Printer {
-    fun print(text: String) {
-        //DO NOT CHANGE. ONLY FOR DEMO PURPOSES.
+class  Printer {
+    var statement = ""
+    var flag: Int = 0
+       fun print(text: String) {
+        flag++
+        statement = text
     }
+
 }
