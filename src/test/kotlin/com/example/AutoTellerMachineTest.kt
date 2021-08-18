@@ -17,7 +17,7 @@ class AutoTellerMachineTest : StringSpec({
         val atm = AutoTellerMachine(fakePrinter, fakeBankingService)
         atm.withdraw(20)
         verify { fakePrinter.print("20") }
-        fakeBankingService.balance shouldBe 20
+        fakeBankingService.balance shouldBe 2
     }
 
     "should print a receipt if money is withdrawn successfully" {
